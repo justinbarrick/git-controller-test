@@ -3,6 +3,8 @@ kind: VolumeSnapshot
 metadata:
   name: csi-do-test-pvc-03b4a121-771e-46f4-aeed-230b66d45285
   namespace: default
+  labels:
+    hello: world
 spec:
   snapshotClassName: do-block-storage
   snapshotContentName: ""
