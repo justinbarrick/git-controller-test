@@ -1,0 +1,19 @@
+apiVersion: snapshot.storage.k8s.io/v1alpha1
+kind: VolumeSnapshot
+metadata:
+  name: csi-do-test-pvc-f57bbe3a-fb3c-49c3-bf8a-9cc6960beaad
+  namespace: default
+spec:
+  snapshotClassName: do-block-storage
+  snapshotContentName: ""
+  source:
+    kind: PersistentVolumeClaim
+    name: csi-do-test-pvc
+status:
+  creationTime: null
+  error:
+    message: 'Failed to create snapshot: the PVC csi-do-test-pvc is not yet bound
+      to a PV, will not attempt to take a snapshot'
+    time: "2019-02-26T06:31:20Z"
+  ready: false
+  restoreSize: null
